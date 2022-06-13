@@ -1,0 +1,228 @@
+<!-- 
+  --------------------Auther :-> Adam Abdulkarim Adam Samakb---------------------
+  --------------------------School Design Project V1--====================-------
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--* -------------------------normalize---------------------------  -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!--* ------------------------font awesome-----------------------  -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!--* -------------------------bootsrap---------------------------- -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- *--------------------------main css--------------------------- -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!--* --------------------------fonts------------------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>School System</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container-fluid">
+        <!--* ---------------------------Start aside----------------------------- -->
+        <div class="aside">
+          <!-- header -->
+          <header>
+            <img src="images/logo.png" alt="" />
+            <h2>مدرسة قيس الرياض بنين</h2>
+            <p>أساس . متوسط . ثانوي</p>
+          </header>
+          <!-- Start aside content -->
+          <div class="aside-content">
+            <div class="feature">
+              <span><i class="fa-solid fa-bars-progress"></i></span>
+              <a href="">لوحة القيادة</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-book"></i></span>
+              <a href="">المقررات الدراسية</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-user"></i></span>
+              <a href="">المعلمين</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-user-graduate"></i></span>
+              <a href="">الطلاب</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-calculator"></i></span>
+              <a href="">مخرجات التعلم للمقررات</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-circle-info"></i></span>
+              <a href="">بنك الأسئلة</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-chart-area"></i></span>
+              <a href="">الإستبيانات والمقاييس</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+            <div class="feature">
+              <span><i class="fa-solid fa-chart-pie"></i></span>
+              <a href="">تقارير وإحصائيات</a>
+              <span><i class="fa-solid fa-angle-left"></i></span>
+            </div>
+          </div>
+          <!-- End aside content -->
+        </div>
+        <!--* ---------------------------End aside----------------------------- -->
+
+        <!--* ---------------------------Start view----------------------------- -->
+        <div class="view">
+          <!-- header -->
+          <header>
+            <div class="right-icons">
+              <span>
+                <a href=""><i class="fa-regular fa-message"></i></a
+              ></span>
+              <span>
+                <a href=""><i class="fa-regular fa-bell"></i></a
+              ></span>
+            </div>
+            <div class="left-icons">
+              <span class="search">
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+                <input type="search" />
+              </span>
+              <span
+                ><a href=""><i class="fa-solid fa-a-light fa-gear"></i></a
+              ></span>
+              <span
+                ><a href=""
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i></a
+              ></span>
+            </div>
+          </header>
+          <!-- Start view content -->
+          <div class="view-content">
+            <div class="container">
+              <div class="view-content-header">
+                <h2>المقررات الدراسية</h2>
+                <span>
+                  <i class="fa-solid fa-circle-plus"></i>
+                  <a href="">إضافة مرحلة دراسية جديدة</a>
+                </span>
+              </div>
+              <button class="btn">المرحلة الإبتدائية</button><br />
+              <div class="buttons">
+                <button class="btn">الصف الأول</button>
+                <button class="btn">الصف الثاني</button>
+                <button class="btn">الصف الثالث</button>
+                <button class="btn">الصف الرابع</button>
+                <button class="btn">الصف الخامس</button>
+                <button class="btn">الصف السادس</button>
+              </div>
+              <div class="table-resposive">
+                <table class="table table-hover">
+                  <div class="table-title">
+                    <span>مقررات التعليم العام</span>
+                    <button>
+                      <i class="fa-solid fa-circle-plus"></i> إضافة مقرر
+                    </button>
+                  </div>
+                  <thead>
+                    <tr>
+                      <th scope="col">إسم المقرر</th>
+                      <th scope="col">الفصل</th>
+                      <th scope="col">عدد الطلاب</th>
+                      <th scope="col">إسم المعلم</th>
+                      <th scope="col">الفصل الدراس</th>
+                      <th scope="col">العام الدراسي</th>
+                      <th scope="col"></th>
+                      <th scope="col">تعديل</th>
+                      <th scope="col">حذف</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>التاريخ السوداني</td>
+                      <td>أ</td>
+                      <td>80</td>
+                      <td>ادم عبدالكريم ادم سمكاب</td>
+                      <td>الأول</td>
+                      <td>1442/1443</td>
+                      <td><button>المخرجات</button></td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-pencil"></i></a>
+                      </td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>التاريخ السوداني</td>
+                      <td>أ</td>
+                      <td>80</td>
+                      <td>ادم عبدالكريم ادم سمكاب</td>
+                      <td>الأول</td>
+                      <td>1442/1443</td>
+                      <td><button>المخرجات</button></td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-pencil"></i></a>
+                      </td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>التاريخ السوداني</td>
+                      <td>أ</td>
+                      <td>80</td>
+                      <td>ادم عبدالكريم ادم سمكاب</td>
+                      <td>الأول</td>
+                      <td>1442/1443</td>
+                      <td><button>المخرجات</button></td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-pencil"></i></a>
+                      </td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>التاريخ السوداني</td>
+                      <td>أ</td>
+                      <td>80</td>
+                      <td>ادم عبدالكريم ادم سمكاب</td>
+                      <td>الأول</td>
+                      <td>1442/1443</td>
+                      <td><button>المخرجات</button></td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-pencil"></i></a>
+                      </td>
+                      <td>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End view conent -->
+        </div>
+        <!--* ---------------------------End view----------------------------- -->
+      </div>
+    </div>
+  </body>
+</html>

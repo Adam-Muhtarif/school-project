@@ -1,0 +1,609 @@
+/*! __________________ This Project not complete yet _____________ */
+/*!______________________________ About __________________________
+
+  --------------- Auther :-> Adam Abdulkarim Adam Samakb ---------------
+  --------------------- School Design Project V1 ------------------------
+ */
+
+/**  --------------------Start Global rules and variables--------------------- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  direction: rtl;
+}
+
+/* start variables */
+:root {
+  --MainColor: #39cccc;
+  --secondary-color: #2c4755;
+  --third-color: #999;
+  --danger-color: #bc243c;
+  --edit-color: #0072b5;
+  --border-color: #ddd;
+}
+/* end variables */
+
+/**  -------------------- End Global rules and variables --------------------- */
+
+/*! -----------------this is view & aside container----------------------- */
+.page .container-fluid {
+  height: 120vh;
+  display: flex;
+}
+/*!-----------------------------------------------------------------------  */
+
+/** --------------------Start aside----------------------------- */
+.aside {
+  font-family: "Cairo", sans-serif;
+  width: 30%;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+}
+
+/* Start aside header */
+.aside header {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside header img {
+  width: 150px;
+  margin: 0 0 30px 75px;
+}
+.aside header h2 {
+  color: var(--MainColor);
+  font-weight: 900;
+  margin: 0 0 10px;
+}
+.aside header p {
+  color: #999;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+/* End aside header */
+
+/* Start aside content */
+.aside-content {
+  display: flex;
+  flex-direction: column;
+}
+.aside-content .feature {
+  display: flex;
+  justify-content: flex-start;
+  width: 390px;
+  /* flex: 1; */
+  color: var(--third-color);
+  border-radius: 25px;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.aside-content .feature:hover {
+  background-color: rgba(56, 204, 204, 0.3);
+  padding: 12px;
+}
+.aside-content .feature:first-child {
+  margin-bottom: 10px;
+}
+.aside-content .feature:nth-child(4) {
+  margin-bottom: 10px;
+}
+.aside-content .feature a {
+  font-size: 17px;
+  font-weight: 800;
+  margin-right: 15px;
+  text-decoration: none;
+  color: var(--third-color);
+}
+.aside-content i {
+  font-size: 25px;
+}
+.aside-content .feature:hover a,
+.aside-content .feature:hover i {
+  color: rgb(56, 204, 204);
+}
+
+/* left arrrow */
+.aside-content .feature span:last-child i {
+  position: absolute;
+  left: 5%;
+}
+/* End aside content */
+
+/** -----------------------End aside------------------------------ */
+
+/** ----------------------------Start view--------------------------- */
+.view {
+  flex: 1;
+}
+
+/* Start view header */
+.view header {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--border-color);
+  padding: 30px 20px 20px;
+  border-bottom: 5px solid #008b8b;
+}
+header i {
+  font-size: 20px;
+  color: var(--MainColor);
+}
+header .right-icons span,
+.left-icons span {
+  margin: 0 15px 0;
+  position: relative;
+}
+
+/* the circle for icons except search */
+.view header .right-icons span::before,
+.view header .left-icons span:not(.search)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(2.2);
+  background-color: #ddd;
+  z-index: -1;
+}
+
+/* tiny circle for bell */
+header .right-icons span:last-child::after {
+  content: "3";
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  bottom: -50%;
+  right: -50%;
+  background-color: #008b8b;
+  z-index: -1;
+}
+
+/* search box */
+.search input {
+  width: 300px;
+  border: 1px solid black;
+  padding: 8px;
+  margin-top: -8px;
+  background-color: white;
+  border-radius: 25px;
+}
+.left-icons .search i {
+  position: absolute;
+  left: 30px;
+  padding: 3px;
+  color: var(--third-color);
+}
+.search input:focus {
+  outline: none;
+  color: black;
+}
+/* End view header */
+
+/* start view content */
+.view .view-content {
+  font-family: "Cairo", sans-serif;
+  height: 120vh;
+  background-color: rgba(149, 248, 248, 0.1);
+}
+.view-content h2 {
+  padding-top: 20px;
+  margin: 0 0 20px;
+  font-weight: 900;
+}
+.view-content-header a,
+.view-content-header i {
+  color: var(--MainColor);
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.view-content-header + button {
+  margin-bottom: 5px;
+  width: 226px;
+  font-weight: 900;
+  background-color: white;
+  outline: 1px solid;
+}
+.view-content .buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.buttons button:first-child {
+  background-color: white;
+}
+.buttons button {
+  font-weight: 900;
+  background-color: rgba(56, 204, 204, 0.3);
+  padding: 10px;
+  margin-left: 5px;
+  outline: 1px solid;
+}
+.table-resposive {
+  background-color: white;
+  margin-top: 5px;
+  border: 2px solid var(--border-color);
+  padding: 15px;
+}
+.table-resposive .table-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-resposive .table-title span {
+  font-size: 19px;
+  color: var(--MainColor);
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+.table-title button {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-left: 20px;
+  color: var(--MainColor);
+  border: 2px solid var(--MainColor);
+}
+
+table {
+  font-size: 15px;
+  margin-top: 15px;
+}
+table thead {
+  background-color: rgba(149, 248, 248, 0.1);
+}
+table thead th {
+  border-bottom: none;
+}
+table tbody tr td {
+  border-bottom: 1px solid var(--border-color);
+}
+table tbody tr td button {
+  background-color: #2c4755;
+  border-radius: 10px;
+  color: white;
+}
+table tbody tr td:nth-last-child(1) i {
+  color: var(--danger-color);
+}
+table tbody tr td:nth-last-child(2) i {
+  color: var(--edit-color);
+}
+table tbody tr td:not(:first-child :nth-child(4)) {
+  text-align: center;
+}
+/* end view content */
+/** ----------------------------End view--------------------------- */
+
+/*todo --------------------------Start media query-------------------------- */
+
+/* / Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+  start aside 
+  .aside {
+    width: 30%;
+  }
+  .aside header img {
+    width: 90px;
+    margin: 0 0 30px 45px;
+  }
+  .aside header h2 {
+    font-size: 12px;
+  }
+  .aside header p {
+    font-size: 9px;
+  }
+  .aside-content .feature {
+    width: 150px;
+  }
+  .aside-content .feature:first-child {
+    margin-bottom: 0;
+  }
+  .aside-content .feature:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .aside-content i {
+    font-size: 14px;
+  }
+  .feature a {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  end aside
+
+  start view
+  .view {
+    width: 70%;
+  }
+  header i {
+    font-size: 16px;
+  }
+  header .right span,
+  .left span {
+    margin: 0 5px 0;
+  }
+  header .right span::before,
+  header .left span:not(.search)::before {
+    transform: scale(1.7);
+  }
+  header .right span:last-child::after {
+    font-size: 10px;
+    width: 60%;
+    height: 60%;
+    bottom: -50%;
+    right: -50%;
+  }
+  .search input {
+    width: 150px;
+    padding: 4px;
+  }
+  .left .search i {
+    left: 17px;
+    padding: 4px;
+  }
+
+  end view
+} */
+/* / Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+  start aside
+  .aside header h2 {
+    font-size: 18px;
+  }
+  .feature a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .aside-content .feature {
+    width: 220px;
+  }
+  .aside-content .feature:first-child {
+    margin-bottom: 2px;
+  }
+  .aside-content .feature:nth-child(4) {
+    margin-bottom: 2px;
+  }
+  .aside-content i {
+    font-size: 19px;
+  }
+  end aside
+  start view
+
+  .view header i {
+    font-size: 20px;
+  }
+  .view header .right span,
+  .left span {
+    margin: 0 10px 0;
+  }
+  .view header .right span::before,
+  .view header .left span:not(.search)::before {
+    transform: scale(2);
+  }
+  .view header .right span:last-child::after {
+    font-size: 13px;
+    width: 70%;
+    height: 70%;
+    bottom: -50%;
+    right: -50%;
+  }
+  .search input {
+    width: 200px;
+    padding: 8px;
+  }
+  .left .search i {
+    left: 21px;
+    padding: 4px;
+  }
+
+  end view
+} */
+
+/* / Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  start aside
+  .aside header img {
+    width: 120px;
+    margin: 0 0 30px 60px;
+  }
+  .aside header h2 {
+    font-size: 20px;
+  }
+  .aside header p {
+    font-size: 16px;
+  }
+  .feature a {
+    font-size: 17px;
+    margin-right: 10px;
+  }
+  .aside-content .feature {
+    width: 255px;
+  }
+  .aside-content .feature:first-child {
+    margin-bottom: 4px;
+  }
+  .aside-content .feature:nth-child(4) {
+    margin-bottom: 4px;
+  }
+  .aside-content i {
+    font-size: 21px;
+  }
+  end aside
+
+  start view
+  header i {
+    font-size: 23px;
+  }
+  header .right span,
+  .left span {
+    margin: 0 13px 0;
+  }
+  header .right span::before,
+  header .left span:not(.search)::before {
+    transform: scale(2.1);
+  }
+  header .right span:last-child::after {
+    font-size: 15px;
+    width: 80%;
+    height: 80%;
+    bottom: -50%;
+    right: -50%;
+  }
+  .search input {
+    width: 250px;
+    padding: 10px;
+  }
+  .left .search i {
+    left: 25px;
+    padding: 5px;
+  }
+
+  end view
+} */
+
+/* / X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+  start aside
+  .aside header img {
+    width: 150px;
+    margin: 0 0 30px 75px;
+  }
+  .aside header h2 {
+    font-size: 23px;
+  }
+  .aside header p {
+    font-size: 18px;
+  }
+  .feature a {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .aside-content i {
+    font-size: 20px;
+  }
+  .aside-content .feature {
+    width: 315px;
+  }
+  .aside-content .feature:first-child {
+    margin-bottom: 6px;
+  }
+  .aside-content .feature:nth-child(4) {
+    margin-bottom: 6px;
+  }
+  end aside
+
+  start view
+  header i {
+    font-size: 23px;
+  }
+  header .right span,
+  .left span {
+    margin: 0 20px 0;
+  }
+  header .right span::before,
+  header .left span:not(.search)::before {
+    transform: scale(2);
+  }
+  header .right span:last-child::after {
+    font-size: 15px;
+    width: 80%;
+    height: 80%;
+    bottom: -50%;
+    right: -50%;
+  }
+  .search input {
+    width: 250px;
+    padding: 10px;
+  }
+  .left .search i {
+    left: 25px;
+    padding: 5px;
+  }
+
+  end view
+} */
+
+/* / XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {
+  start aside
+  .aside header img {
+    width: 200px;
+    margin: 0 0 30px 100px;
+  }
+  .aside header h2 {
+    font-size: 28px;
+  }
+  .aside header p {
+    font-size: 20px;
+  }
+  .feature a {
+    font-size: 17px;
+    margin-right: 15px;
+  }
+  .aside-content i {
+    font-size: 21px;
+  }
+  .aside-content .feature {
+    width: 350px;
+  }
+  .aside-content .feature:first-child {
+    margin-bottom: 10px;
+  }
+  .aside-content .feature:nth-child(4) {
+    margin-bottom: 10px;
+  }
+  end aside
+
+  start view
+  header i {
+    font-size: 25px;
+  }
+  header .right span,
+  .left span {
+    margin: 0 20px 0;
+  }
+  header .right span::before,
+  header .left span:not(.search)::before {
+    transform: scale(2);
+  }
+  header .right span:last-child::after {
+    font-size: 15px;
+    width: 80%;
+    height: 80%;
+    bottom: -50%;
+    right: -50%;
+  }
+  .search input {
+    width: 400px;
+    padding: 10px;
+  }
+  .left .search i {
+    left: 25px;
+    padding: 5px;
+  }
+
+  end view
+} */
+
+/*todo --------------------------End media query-------------------------- */
